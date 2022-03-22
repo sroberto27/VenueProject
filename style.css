@@ -1,0 +1,270 @@
+/* this is a CSS file for the index page. it is pretty simple. i try to
+apply some Responsive disgn it works kind of good the main problem is that
+I have done nothing to make the text font to be Responsive. so we you use
+different screen sizes the font won't change. */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+
+body {
+	margin: 0 auto;
+	padding: .5em;
+	font: 400 12px/22px 'Open Sans', Verdana, Helvetica, sans-serif;
+	color: black;
+	grid-gap: .5em;
+	grid-template-columns: 20em 1fr 20em;
+	grid-template-rows: 64px auto;
+	height: 100vh;
+	width: 100%;
+	max-width: 50em;
+	background-color: #EEEEEE;
+}
+
+#logo {
+	float: left;
+}
+
+h1.label {
+	font-size: 12pt;
+}
+.label {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#logo-img {
+	width: 64px;
+	vertical-align: middle;
+}
+
+.icon {
+	width: 32px;
+	vertical-align: middle;
+}
+
+#ad-space {
+	background-color: #999;
+	vertical-align: middle;
+	text-align: center;
+	height: 64px;
+	border: 1px solid grey;
+	color: white;
+	grid-column: 2;
+	grid-row: 1;
+	clear: both;
+	padding: 1.5em;
+}
+
+#user {
+	font-weight: bold;
+	grid-column: 3;
+	grid-row: 1;
+	float: right;
+	height: 64px;
+	padding-top: 16px;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.scrollable {
+	flex: 1 1;
+	overflow-y: auto;
+}
+#sidebar {
+	grid-column: 1;
+	grid-row: 2;
+	clear: both;
+}
+#map-container {
+	overflow-y: auto;
+	grid-column: 2;
+	grid-row: 2;
+}
+#map {
+	width: 100%;
+	border: 1px solid black;
+}
+#top5-container {
+	grid-column: 3;
+	grid-row: 2;
+}
+
+.thumbnail {
+	width: 4.5em;
+	height: 3.5em;
+	object-fit: cover;
+	float: left;
+	margin-right: .5em;
+	border: 1px solid black;
+}
+
+.artname {
+	font-weight: bold;
+	display: block;
+}
+
+.top5 {
+	padding: .5em;
+	border-bottom: 1px solid grey;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+li {
+	padding: 0px;
+	margin: 0;
+	clear: left;
+}
+
+.sidebar a {
+	padding: .25em;
+	color: black;
+	display: block;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	background-color: #ccc;
+}
+
+.sidebar a.active {
+	color: #4CAF50;
+	font-weight: bold;
+}
+
+#sidemenu {
+	margin: 0 auto;
+}
+#sidemenu li {
+	display: inline-block;
+}
+#lists {
+	display: none;
+}
+
+@supports (grid-area: auto) {
+	@media (min-width: 50em) {
+		body {
+			max-width: 100%;
+			display: grid;
+		}
+		h1.label {
+			font-size: 15pt;
+		}
+		#sidemenu {
+			margin: 0;
+		}
+		#sidemenu li {
+			display: block;
+		}
+		#lists {
+			display: block;
+		}
+		.sidebar a.list-header {
+			background-color: #4CAF50;
+			font-weight: bold;
+			color: white;
+		}
+	}
+}
+/* calendar */
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #4CAF50;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: #4CAF50;
+  color: white !important
+}
+.days li .active2 {
+  padding: 5px;
+  background: #FF0000;
+  color: white !important
+}
+.heighttext{
+
+	display:inline-block;
+	padding:15px 10px;
+	line-height:1%;
+	width:100%;
+}
